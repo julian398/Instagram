@@ -15,18 +15,18 @@
   <body>
     <center>
        Crear cuenta
-    <form class="" action="Iniciar_sesion.html" method="post">
-
-      <input type="text" name="" placeholder="Correo electronico">
+    <form class="" action="{% url 'index' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="correo" placeholder="Correo electronico">
       <br>
       <br>
-      <input type="text" name="" placeholder="Nombre de cuenta">
+      <input type="text" name="usuario" placeholder="Nombre de cuenta">
       <br>
       <br>
-      <input type="text" name="" placeholder="Contraseña">
+      <input type="password" name="password" placeholder="Contraseña">
       <br>
       <br>
-      <input type="password" name="" placeholder="Repetir contraseña">
+      <input type="text" name="nombre_completo" placeholder="Nombre completo">
       <br>
       <br>
       <button name="button">Iniciar</button>

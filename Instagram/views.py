@@ -1,11 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from Instagram.models import *
 
 # Create your views here.
 def index(request):
-    return render (request, 'Crear_cuenta.html')
-
-def suma(request):
     if request.method == 'GET':
-        return render(reques, 'suma.html')
+        return render (request, 'Crear_cuenta.html')
     else:
-        numero1 = int(request.POST)
+        name = request.POST ['nombre_completo']
+        username = request.POST ['usuario']
+        email = request.POST ['correo']
+        password = request.POST ['password']
+        print (name)
+        print (username)
+        print (email)
+        print (password)
+        usuarioDjango = User.objects.create_user(username = username,
+        password = password,
+        email = email,
+        first_name = name,)
+        miUsuario = MiUsuario(usuario_django = usuarioDjango)
+        usuarioDjango.save()
+        miUsuario.save()
+        return redirect ('Iniciar_sesion')
+
+def login(request):
+    print (MiUsuario.objects.count())
+    return render (request, 'Iniciar_sesion.html')
