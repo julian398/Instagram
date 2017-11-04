@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=News+Cycle");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.photo_container {
+  width: 600px;
+  background: white;
+  border: 1px solid #111;
+}
+
+.photo_container .photo_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.photo_container .photo_user {
+  padding: 10px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.photo_container .photo_image img {
+  width: 100%;
+  display: block;
+}
+
+.photo_container .likes_and_comments {
+  padding: 10px;
+  font-size: 150%;
+}
+
+[class^="icon-"] {
+  padding: 10px;
+}
+
+.photo_container .photo_likes {
+  margin: 0;
+  padding: 0 10px 10px 10px;
+  font-size: 150%;
+}
+
+.photo_likes_letters {
+  font-family: 'News Cycle', sans-serif;
+}
+
+.input_comment input {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 80%;
+}
+
+.input_comment {
+  padding: 10px 0;
+  margin: 0 10px;
+  border-top: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input_comment input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  outline: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

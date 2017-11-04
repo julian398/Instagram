@@ -11,24 +11,33 @@
 
   </head>
   <body>
-    <center>
-      Iniciar sesion
+
+        <center>
+
+                  Iniciar sesion
+
+
+      <form class="" action="{%url 'login' %}" method="post">
+
+
+        <input type="text" name="username" placeholder="Correo electronico">
+        <br>
+        <br>
+        <input type="text" name="password" placeholder="Contraseña">
+        <br>
+        <br>
+        <button name="button">Entrar</button>
+
+        {% csrf_token %}
+
+      </form>
+    </form>
+
       <br>
       <br>
 
-     <form class="" action="Bienbenido.html" method="post">
-
-
-    <input type="text" name="" placeholder="Correo electronico">
-    <br>
-    <br>
-    <input type="text" name="" placeholder="Contraseña">
-    <br>
-    <br>
-    <button name="button">Entrar</button>
   </body>
 
-  </form>
 
     <center>
 </html>

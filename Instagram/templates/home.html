@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Andres Julian Avella C.</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="css/Style.css">
+<link href="https://file.myfontastic.com/ugQ4pVNCu4neA78VN4gxM/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+
+
+</head>
+
+<body>
+  <a href="{% url 'profile' %}">Perfil</a>
+
+
+<a href="{% url 'logout' %}">Cerrar sesion</a>
+  <section class="photo_container">
+ <section class= "photo_header">
+   <img src="https://cdn-images-1.medium.com/fit/c/200/200/0*JqAiahNklVRiLTne.png" class="photo_user">
+   <br>
+  <h3 class="photo_username">{{ usuario_actual.usuario_django.username }}</h3>
+  </section>
+  <section class="photo_image">
+   <img src="http://via.placeholder.com/600x700">
+   <section class="likes_and_comments">
+     <i class="icon-heart-o"></i>
+     <i class="icon-comment-o"></i>
+     </section>
+     <h6 class="photo_likes">
+       <i class="photo_likes_nubers">34,554</i>
+       <i class="photo_likes_letters">Me gusta</i>
+       <br>
+       <section class="input_comment">
+       <input placeholder="Agrega un comentario">
+         <i class="icon-dot-3"></i>
+       </section>
+ </section>
+</section>
+
+
+</body>
+</html>
